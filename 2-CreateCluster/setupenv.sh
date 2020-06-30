@@ -60,7 +60,7 @@ deployAKS()
     export AKS_CLUSTER_NAME=acmworkshop
 
     az group create --name $AKS_RESOURCE_GROUP --location centralus
-    az aks create --resource-group $AKS_RESOURCE_GROUP --name $AKS_CLUSTER_NAME --node-count 3 --node-vm-size Standard_DS3v2 --generate-ssh-keys
+    az aks create --resource-group $AKS_RESOURCE_GROUP --name $AKS_CLUSTER_NAME --node-count 3 --node-vm-size Standard_DS2_v2 --generate-ssh-keys
 
     az aks get-credentials --resource-group $AKS_RESOURCE_GROUP --name $AKS_CLUSTER_NAME
 }
